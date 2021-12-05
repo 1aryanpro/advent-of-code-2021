@@ -1,4 +1,4 @@
-input = open('day2.txt', 'r').read().split('\n')
+input = open('inputs/day2.txt', 'r').read().split('\n')
 arr = [y.split(" ") for y in input[:-1]]
 
 x = y = a = 0

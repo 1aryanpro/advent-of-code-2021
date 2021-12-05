@@ -1,4 +1,4 @@
-input = open('day3.txt', 'r').read().split('\n')
+input = open('inputs/day3.txt', 'r').read().split('\n')
 arr = [y for y in input[:-1]]
 size = len(arr[0])
 counts = [0]*size

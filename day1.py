@@ -1,4 +1,4 @@
-input = open('day1.txt', 'r').read().split('\n')
+input = open('inputs/day1.txt', 'r').read().split('\n')
 arr = [int(y) for y in input[:-1]]
 count1 = count2 = 0
 
