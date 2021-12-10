@@ -1,7 +1,7 @@
-input = open('inputs/day4.txt', 'r').read().split('\n')
+input = open('inputs/day4.txt', 'r').readlines()
 draws = [int(n) for n in input[0].split(",")]
 
-input = input[2:-1]
+input = input[2:]
 
 boards = [[]]
 marks = [[]]

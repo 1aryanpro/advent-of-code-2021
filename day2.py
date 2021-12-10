@@ -1,5 +1,5 @@
-input = open('inputs/day2.txt', 'r').read().split('\n')
-arr = [y.split(" ") for y in input[:-1]]
+input = open('inputs/day2.txt', 'r').readlines()
+arr = [y.split(" ") for y in input]
 
 x = y = a = 0
 

@@ -1,5 +1,5 @@
-input = open('inputs/day5.txt', 'r').read().split('\n')
-lines = [l.replace(" -> ", " ").replace(",", " ").split() for l in input[:-1]]
+input = open('inputs/day5.txt', 'r').readlines()
+lines = [l.replace(" -> ", " ").replace(",", " ").split() for l in input]
 
 size = 1000
 matrix = [[0]*size for i in range(size)]

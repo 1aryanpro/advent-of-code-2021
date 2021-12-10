@@ -1,5 +1,5 @@
-input = open('inputs/day1.txt', 'r').read().split('\n')
-arr = [int(y) for y in input[:-1]]
+input = open('inputs/day1.txt', 'r').readlines()
+arr = [int(y) for y in input]
 count1 = count2 = 0
 
 for i in range(1, len(arr)):
