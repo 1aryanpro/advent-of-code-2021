@@ -14,22 +14,22 @@ def lowPoint(y, x):
     return all(map(lambda n: curr < n, dirs))
 
 def basin(y, x):
+    if input[y][x] >= 9: return 0
     input[y][x] = 10
     output = 1
 
     for i in [-1, 1]:
-        if lowPoint(y, x+i): output += basin(y, x+i)
-        if lowPoint(y+i, x): output += basin(y+i, x)
+        output += basin(y, x+i)
+        output += basin(y+i, x)
 
     return output
 
-count = 0
 basins = []
 for y in range(1, len(input) - 1):
     for x in range(1, len(input[0]) - 1):
-        if lowPoint(y, x):
-            basins.append(basin(y, x))
+        basins.append(basin(y, x))
 
 basins = sorted(basins)
 for l in input: print("".join(map(lambda c: str(c) if c != 10 else 'v',l)))
+# print(basins)
 print(basins[-1] * basins[-2] * basins[-3])
