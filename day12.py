@@ -1,4 +1,4 @@
-input = open('inputs/day12test3.txt').readlines()
+input = open('inputs/day12.txt').readlines()
 input = [l[:-1].split('-') for l in input]
 
 paths = {}
@@ -17,7 +17,7 @@ def pathfind(pos = 'start', visited = [], double = False, path = []):
         if b == 'end':
             count += 1
             path.append(b)
-            print(",".join(path))
+            # print(",".join(path))
             continue
         if b in visited:
             if double or b == 'start': continue
@@ -28,7 +28,7 @@ def pathfind(pos = 'start', visited = [], double = False, path = []):
 def pathfind2(pos = 'start', visited = [], double = False, path = []):
     if pos == 'end':
         path.append(pos)
-        print(','.join(path))
+        # print(','.join(path))
         return 1
     if pos in visited:
         if double or pos == 'start': return 0
