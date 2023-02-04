@@ -1,8 +1,8 @@
 input = open('inputs/day5.txt', 'r').readlines()
-lines = [l.replace(" -> ", " ").replace(",", " ").split() for l in input]
+lines = [line.replace(" -> ", " ").replace(",", " ").split() for line in input]
 
 size = 1000
-matrix = [[0]*size for i in range(size)]
+matrix = [[0]*size for _ in range(size)]
 
 for i in range(len(lines)):
     lines[i] = [int(n) for n in lines[i]]
